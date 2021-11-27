@@ -9,8 +9,7 @@ In this tutorial we will discuss
 
 ## Practice Writing Regular Expressions!
 
-You can click <h1 align="center"><a href="https://regexr.com/" target="_blank">here</a>
-</h1> to navitage to an online regex editor to practice your regex scripting as you learn!
+You can click <span><a href="https://regexr.com/" target="_blank">here</a></span> to navitage to an online regex editor to practice your regex scripting as you learn!
 
 ## Table of Contents
 
