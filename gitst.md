@@ -39,7 +39,7 @@ Anchors are used for matching characters at the beginning and end of a string or
 
 <br>
 
-The ``\b`` and ``\B`` anchors reference "word bounries" which are found at the begining or end of a word. <br>
+The ``\b`` and ``\B`` anchors reference "word boundaries" which are found at the begining or end of a word. <br>
 
 - Example 1: <br> ``“I wanted to eat, so I ate a cheeseburger at McDonald’s”``
 
