@@ -1,12 +1,11 @@
-# Title (replace with your title)
+# Regular Expression Tutorial
 
-Introductory paragraph (replace this with your text)
-
-
+This tutorial is meant to be a foundational reference guide for anyone learning Regular Espressions.
+By the end of this tutorial you will know what Regular Expressions (RegExs) are, when to use them, all of their different functionality, as well as some cool tips on how to improve your own regex scripting.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+In this tutorial we will discuss 
 
 ## Table of Contents
 
