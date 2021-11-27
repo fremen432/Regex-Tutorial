@@ -2,6 +2,8 @@
 
 Introductory paragraph (replace this with your text)
 
+
+
 ## Summary
 
 Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
@@ -44,6 +46,8 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ### Look-ahead and Look-behind
 
-## Author
+## About the Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Clayton Miller is a budding coder and web-developer. He started his journey in the world of coding at with the Full-Stack Web Development Bootcamp at the University of Texas. Clayton looks forward to learning more about all asects of web development, sharpening his coding skills and meeting more awesome coders who are just as excited about coding as he is!
+
+- [Clayton Miller's GitHub](https://github.com/fremen432)
