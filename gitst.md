@@ -25,7 +25,44 @@ Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a
 
 ## Regex Components
 
-### Anchors
+### Anchors   
+
+Example String 1: ``“I wanted to eat, so I ate a cheeseburger at McDonald’s”``
+
+
+Anchors are used for matching characters at the beginning and end of a string or adjacent to a word boundary. When using anchors, it's important to think about where the characters are located inside of the any given word or string before writing the expression. Placing the anchor before or after the string you're searching for in the expression will render differing results as seen in the example below. 
+
+The ``\b`` and ``\B`` anchors reference "word bounries" which are found at the begining or end of a word. 
+Let's say we wanted to find a match for "at" inside of example string 1. Depending on where we place the anchor in our expression, we can match different instances of the string we're searching for.
+
+``at\b`` matches
+![at b](https://user-images.githubusercontent.com/87861603/143668111-d09e9dab-8c8b-446e-9d92-3a1015aca6b8.png)
+
+``\bat`` matches
+![bat](https://user-images.githubusercontent.com/87861603/143668121-9b15c968-0e47-4d39-b2d2-8e6241c497d6.png)
+
+``\Bat`` matches
+![Bat copy](https://user-images.githubusercontent.com/87861603/143668632-343e0bf7-2e93-44b8-90fb-851a1e4a7d8f.png)
+
+``at\B`` matches
+![at B copy](https://user-images.githubusercontent.com/87861603/143668637-94b003c6-e649-4f62-9db6-a39c3da139e1.png)
+
+
+The ``^`` and ``$`` anchors reference the begining and end of a string.
+
+- All RegEx Anchors:
+
+``\b`` Word Boundary          <br>
+``\B`` Not a Word Boundary    <br>
+``^``  Beginning of a String  <br>
+``$``  End of a String        <br>
+
+- Example:	
+Let's say we want to find a match for "at" inside of the string ``“I wanted to eat, so I ate a cheeseburger at McDonald’s”``. We can use different anchor tags to find different matches for "at" based on where they're location in the string and their relation to word boundaries.
+
+
+
+
 
 ### Quantifiers
 
