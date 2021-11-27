@@ -1,7 +1,7 @@
 # Regular Expression Tutorial
 
 This tutorial is meant to be a foundational reference guide for anyone learning Regular Espressions.
-By the end of this tutorial you will know what Regular Expressions (RegExs) are, when to use them, all of their different functionality, as well as some cool tips on how to improve your own regex scripting.
+By the end of this tutorial you will know what a Regular Expression (regex) is, when to use them, all of their different functionality, as well as some cool tips on how to improve your own regex scripting.
 
 ## Summary
 
