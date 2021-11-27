@@ -7,6 +7,10 @@ By the end of this tutorial you will know what a Regular Expression (regex) is, 
 
 In this tutorial we will discuss 
 
+## Practice Writing Regular Expressions!
+
+You can click [here](https://regexr.com/) to navitage to an online regex editor to practice your regex scripting as you learn!
+
 ## Table of Contents
 
 - [Anchors](#anchors)
