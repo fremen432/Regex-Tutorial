@@ -11,17 +11,22 @@ Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a
 
 ## Table of Contents
 
-- [Anchors](#anchors)
-- [Quantifiers](#quantifiers)
-- [OR Operator](#or-operator)
-- [Character Classes](#character-classes)
-- [Flags](#flags)
-- [Grouping and Capturing](#grouping-and-capturing)
-- [Bracket Expressions](#bracket-expressions)
-- [Greedy and Lazy Match](#greedy-and-lazy-match)
-- [Boundaries](#boundaries)
-- [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+- [Regular Expression Tutorial](#regular-expression-tutorial)
+  - [Summary](#summary)
+  - [Table of Contents](#table-of-contents)
+  - [Regex Components](#regex-components)
+    - [Anchors](#anchors)
+    - [Quantifiers](#quantifiers)
+    - [OR Operator](#or-operator)
+    - [Character Classes](#character-classes)
+    - [Flags](#flags)
+    - [Grouping and Capturing](#grouping-and-capturing)
+    - [Bracket Expressions](#bracket-expressions)
+    - [Greedy and Lazy Match](#greedy-and-lazy-match)
+    - [Boundaries](#boundaries)
+    - [Back-references](#back-references)
+    - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+  - [About the Author](#about-the-author)
 
 ## Regex Components
 
@@ -41,9 +46,10 @@ Anchors are used for matching characters at the beginning and end of a string or
 
 The ``\b`` and ``\B`` anchors reference "word boundaries" which are found at the begining or end of a word. <br>
 
-- Example 1: <br> ``“I wanted to eat, so I ate a cheeseburger at McDonald’s”``
+- Example String: <br> 
+    >“I wanted to eat, so I ate a cheeseburger at McDonald’s”
 
-Let's say we wanted to find a match for "at" inside of Example 1. Depending on where we place the anchor in our expression, we can match different instances of the string we're searching.
+Let's say we wanted to find a match for "at" inside of our example string. Depending on where we place the anchor in our expression, we can match different instances of the string we're searching.
 
 ``at\b`` matches
 ![at b](https://user-images.githubusercontent.com/87861603/143668111-d09e9dab-8c8b-446e-9d92-3a1015aca6b8.png)
@@ -59,12 +65,13 @@ Let's say we wanted to find a match for "at" inside of Example 1. Depending on w
 
 <br>
 
-The ``^`` and ``$`` anchors reference the begining and end of a string. RegEx recognizes the end of a string as a series of characters that is terminated by a return.
+The ``^`` and ``$`` anchors reference the begining and end of a line. RegEx recognizes the end of a line as a series of characters that is terminated by a return.
 
-- Example 2: <br> ``I wanted to eat, so I ate a cheeseburger at McDonald’s. Then I went to my car to drive home.`` <br>
-``Once I got home I realized I was still hungry, so I returned to McDonalds for another delicious cheeseburger.``
+<!-- - Example 2: <br> 
+    >"I wanted to eat, so I ate a cheeseburger at McDonald’s. Then I went to my car to drive home. <br>
+    Once I got home I realized I was still hungry, so I returned to McDonalds for another delicious cheeseburger." -->
 
-Let's say we wanted to find a match for any character located at the begining and end of each string in Example 2.
+Let's say we wanted to find a match for any character located at the begining and end of each line in our example.
 
 ``^.`` matches
 ![start](https://user-images.githubusercontent.com/87861603/143669695-dc055880-de23-41c3-91db-2519f23b76dd.png)
@@ -80,14 +87,45 @@ Let's say we wanted to find a match for any character located at the begining an
 
 ### Flags
 
-- All RegEx Anchors:
 
-``/g`` Global          <br>
-``/i`` Case Insensitive    <br>
-``/m``  Multiline  <br>
-``/s``  Single Line        <br>
-``/u``  Unicode        <br>
-``/y``  Sticky        <br>
+
+Flags in Regex are placed at the end of an expression and they define different criteria 
+
+* All RegEx Anchors:
+
+  * ``/g``  Global
+    <br>
+    The Global flag returns all matches in the entire file instead of only returning the first instance of the match.
+    <br><br>
+
+  * ``/i``  Case Insensitive
+    <br>
+    The Case Insensitive flag returns matches regardless of upper or lowercase alpha characters.
+    <br><br>
+
+  * ``/m``  Multiline
+    <br>
+    The Multiline flag is used in conjunction with the ``^`` and ``$`` anchors. 
+    By default, the ``^`` and ``$`` anchors will return 
+    When the ``/m`` flag is added however, the 
+    and returns matches 
+    <br><br>
+
+  * ``/s``  Single Line
+    <br>
+    The Multiline flag returns matches 
+    <br><br>
+
+
+  * ``/u``  Unicode
+    <br>
+    The Multiline flag returns matches 
+    <br><br>
+
+  * ``/y``  Sticky
+    <br>
+    The Multiline flag returns matches 
+    <br><br>
 
 ### Grouping and Capturing
 
