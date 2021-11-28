@@ -74,10 +74,11 @@ The ``^`` and ``$`` anchors reference the begining and end of a line. RegEx reco
 Let's say we wanted to find a match for any character located at the begining and end of each line in our example.
 
 ``^.`` matches
-![start](https://user-images.githubusercontent.com/87861603/143669695-dc055880-de23-41c3-91db-2519f23b76dd.png)
+![Start (single line)](https://user-images.githubusercontent.com/87861603/143735449-e50525b3-b05b-430d-968d-60ace53dd30b.png)
 
 ``.$`` matches
-![end](https://user-images.githubusercontent.com/87861603/143669664-034ae01a-a819-4d4d-b42f-d530d59057ef.png)
+![end (single line)](https://user-images.githubusercontent.com/87861603/143735469-2f10f7f3-f31f-4de0-a210-18cb8ec87213.png)
+
 
 ### Quantifiers
 
