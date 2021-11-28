@@ -43,7 +43,7 @@ The ``\b`` and ``\B`` anchors reference "word boundaries" which are found at the
 
 - Example 1: <br> ``“I wanted to eat, so I ate a cheeseburger at McDonald’s”``
 
-Let's say we wanted to find a match for "at" inside of Example 1. Depending on where we place the anchor in our expression, we can match different instances of the string we're searching for.
+Let's say we wanted to find a match for "at" inside of Example 1. Depending on where we place the anchor in our expression, we can match different instances of the string we're searching.
 
 ``at\b`` matches
 ![at b](https://user-images.githubusercontent.com/87861603/143668111-d09e9dab-8c8b-446e-9d92-3a1015aca6b8.png)
@@ -79,6 +79,15 @@ Let's say we wanted to find a match for any character located at the begining an
 ### Character Classes
 
 ### Flags
+
+- All RegEx Anchors:
+
+``/g`` Global          <br>
+``/i`` Case Insensitive    <br>
+``/m``  Multiline  <br>
+``/s``  Single Line        <br>
+``/u``  Unicode        <br>
+``/y``  Sticky        <br>
 
 ### Grouping and Capturing
 
