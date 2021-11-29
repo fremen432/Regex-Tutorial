@@ -154,6 +154,13 @@ Flags in Regex are placed at the end of an expression and they define different 
 
 ### Grouping and Capturing
 
+Grouping is useful if we want to find a specific character or phrase within another phrase we're searching for. Groups are invoked with the `()` parentheses.
+
+- Example String:
+  > Peter piper picked a patch of pickled peppers
+
+For example, if we wrote `/p(i|e|a)/g` as our expression, we would match:
+
 ### Bracket Expressions
 
 ### Greedy and Lazy Match
