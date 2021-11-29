@@ -5,7 +5,7 @@ By the end of this tutorial you will know what a Regular Expression (regex) is, 
 
 ## Summary
 
-In this tutorial we will discuss 
+In this tutorial we will discuss
 
 Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a></span> to navitage to an online regex editor so you can practice your regex scripting as you learn!
 
@@ -30,102 +30,116 @@ Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a
 
 ## Regex Components
 
-### Anchors   
+### Anchors
 
-Anchors are used for matching characters at the beginning and end of a string or adjacent to a word boundary. When using anchors, it's important to think about where the characters are located inside of the any given word or string before writing the expression. Placing the anchor before or after the string you're searching for in the expression will render differing results as seen in the example below. 
+Anchors are used for matching characters at the beginning and end of a string or adjacent to a word boundary. When using anchors, it's important to think about where the characters are located inside of the any given word or string before writing the expression. Placing the anchor before or after the string you're searching for in the expression will render differing results as seen in the example below.
 
 - All RegEx Anchors:
 
-``\b`` Word Boundary          <br>
-``\B`` Not a Word Boundary    <br>
-``^``  Beginning of a String  <br>
-``$``  End of a String        <br>
-
+  - `\b` Word Boundary
+  - `\B` Not a Word Boundary
+  - `^` Beginning of a String
+  - `$` End of a String
 
 <br>
 
-The ``\b`` and ``\B`` anchors reference "word boundaries" which are found at the begining or end of a word. <br>
+The `\b` and `\B` anchors reference "word boundaries" which are found at the begining or end of a word. <br>
 
-- Example String: <br> 
-    >“I wanted to eat, so I ate a cheeseburger at McDonald’s”
+- Example String: <br>
+  > “I wanted to eat, so I ate a cheeseburger at McDonald’s”
 
 Let's say we wanted to find a match for "at" inside of our example string. Depending on where we place the anchor in our expression, we can match different instances of the string we're searching.
 
-``at\b`` matches
+`at\b` matches
 ![at b](https://user-images.githubusercontent.com/87861603/143668111-d09e9dab-8c8b-446e-9d92-3a1015aca6b8.png)
 
-``\bat`` matches
+`\bat` matches
 ![bat](https://user-images.githubusercontent.com/87861603/143668121-9b15c968-0e47-4d39-b2d2-8e6241c497d6.png)
 
-``\Bat`` matches
+`\Bat` matches
 ![Bat copy](https://user-images.githubusercontent.com/87861603/143668632-343e0bf7-2e93-44b8-90fb-851a1e4a7d8f.png)
 
-``at\B`` matches
+`at\B` matches
 ![at B copy](https://user-images.githubusercontent.com/87861603/143668637-94b003c6-e649-4f62-9db6-a39c3da139e1.png)
 
 <br>
 
-The ``^`` and ``$`` anchors reference the begining and end of a line. RegEx recognizes the end of a line as a series of characters that is terminated by a return.
+The `^` and `$` anchors reference the begining and end of a line. RegEx recognizes the end of a line as a series of characters that is terminated by a return.
 
-<!-- - Example 2: <br> 
+<!-- - Example 2: <br>
     >"I wanted to eat, so I ate a cheeseburger at McDonald’s. Then I went to my car to drive home. <br>
     Once I got home I realized I was still hungry, so I returned to McDonalds for another delicious cheeseburger." -->
 
 Let's say we wanted to find a match for any character located at the begining and end of each line in our example.
 
-``^.`` matches
+`^.` matches
 ![Start (single line)](https://user-images.githubusercontent.com/87861603/143735449-e50525b3-b05b-430d-968d-60ace53dd30b.png)
 
-``.$`` matches
+`.$` matches
 ![end (single line)](https://user-images.githubusercontent.com/87861603/143735469-2f10f7f3-f31f-4de0-a210-18cb8ec87213.png)
-
 
 ### Quantifiers
 
+Quantifiers are uesd when you want to find a match for a certain number of characters.
+
+- All RegEx Quantifiers:
+
+  - `*` 0 or More
+  - `+` 1 or More
+  - `?` 0 or One
+  - `{5}` Exact Number
+  - `{5,6}` Min and Max range of numbers
+
 ### OR Operator
+
+The OR operator is used when you want to find a match for one \_\_ or another. The OR operator is invoked with the `|` character.
+
+- Example String: <br>
+  > “I like chocolate icecream. I like vanila icecream.”
+
+If we wanted to match the whole string in the example above, we could
+do so with the following expression:
+
+`/i enjoy (chocolate|vanila) icecream./g`
 
 ### Character Classes
 
 ### Flags
 
+Flags in Regex are placed at the end of an expression and they define different criteria for the searching behavior.
 
+- All RegEx Anchors:
 
-Flags in Regex are placed at the end of an expression and they define different criteria 
-
-* All RegEx Anchors:
-
-  * ``/g``  Global
+  - `/g` Global
     <br>
     The Global flag returns all matches in the entire file instead of only returning the first instance of the match.
     <br><br>
 
-  * ``/i``  Case Insensitive
+  - `/i` Case Insensitive
     <br>
     The Case Insensitive flag returns matches regardless of upper or lowercase alpha characters.
     <br><br>
 
-  * ``/m``  Multiline
+  - `/m` Multiline
     <br>
-    The Multiline flag is used in conjunction with the ``^`` and ``$`` anchors. 
-    By default, the ``^`` and ``$`` anchors will return 
-    When the ``/m`` flag is added however, the 
-    and returns matches 
+    The Multiline flag is used in conjunction with the `^` and `$` anchors.
+    By default, the `^` and `$` anchors will only return a result if there is a match in the first line.
+    When the `/m` flag is added however, the expression will search ALL lines of code for a match.
     <br><br>
 
-  * ``/s``  Single Line
+  - `/s` Single Line
     <br>
-    The Multiline flag returns matches 
+    The Single Line flag returns matches
     <br><br>
 
-
-  * ``/u``  Unicode
+  - `/u` Unicode
     <br>
-    The Multiline flag returns matches 
+    The Unicode flag returns matches
     <br><br>
 
-  * ``/y``  Sticky
+  - `/y` Sticky
     <br>
-    The Multiline flag returns matches 
+    The Sticky flag returns matches
     <br><br>
 
 ### Grouping and Capturing
