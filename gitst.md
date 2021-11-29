@@ -92,7 +92,7 @@ Quantifiers are uesd when you want to find a match for a certain number of chara
 
 ### OR Operator
 
-The OR operator is used when you want to find a match for one \_\_ or another. The OR operator is invoked with the `|` character.
+The OR operator is used to find a match for one \_\_ or another. The OR operator is invoked with the `|` "pipe" character.
 
 - Example String: <br>
   > “I like chocolate icecream. I like vanila icecream.”
@@ -103,6 +103,16 @@ do so with the following expression:
 `/i enjoy (chocolate|vanila) icecream./g`
 
 ### Character Classes
+
+Character classes are used to find matches of a specific character set ane are invoked by the `[]` brackets. You can also join multiple character sets together by simply adding the next set imediatly after the previous set.
+
+For example, if we wanted to find all lower-case alpha characters, we could do so with the following expression:
+
+`/[a-z]/g`
+
+If we wanted to find lower-case alpha characters, upper-case alpha characters, and numeric characters, we could do so with the following expression:
+
+`/[a-zA-Z0-9]/g`
 
 ### Flags
 
