@@ -160,6 +160,7 @@ Grouping is useful if we want to find a specific character or phrase within anot
   > Peter piper picked a patch of pickled peppers
 
 For example, if we wrote `/p(i|e|a)/g` as our expression, we would match:
+<img width="436" alt="Screen Shot 2021-11-29 at 10 05 29 AM" src="https://user-images.githubusercontent.com/87861603/143902327-c5d6164b-d1d9-449b-bd4a-aeed2b37fb3b.png">
 
 ### Bracket Expressions
 
