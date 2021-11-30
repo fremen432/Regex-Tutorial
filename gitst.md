@@ -32,45 +32,14 @@ Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a
 
 ### Anchors
 
-Anchors are used for matching characters at the beginning and end of a string or adjacent to a word boundary. When using anchors, it's important to think about where the characters are located inside of the any given word or string before writing the expression. Placing the anchor before or after the string you're searching for in the expression will render differing results as seen in the example below.
+<!-- Anchors are used for matching characters at the beginning and end of a string or adjacent to a word boundary. When using anchors, it's important to think about where the characters are located inside of the any given word or string before writing the expression. Placing the anchor before or after the string you're searching for in the expression will render differing results as seen in the example below. -->
 
-- All RegEx Anchors:
+Anchors are used for matching characters or a phrase at the beginning and end of a string. The `^` "carrot" and `$` "dollar-sign" anchors reference the begining and end of a line. RegEx recognizes the end of a line as a series of characters that is terminated by a return.
 
-  - `\b` Word Boundary
-  - `\B` Not a Word Boundary
-  - `^` Beginning of a String
-  - `$` End of a String
+- Example String:
+  > “I wanted to eat, so I ate a cheeseburger at McDonald's.”
 
-<br>
-
-The `\b` and `\B` anchors reference "word boundaries" which are found at the begining or end of a word. <br>
-
-- Example String: <br>
-  > “I wanted to eat, so I ate a cheeseburger at McDonald’s”
-
-Let's say we wanted to find a match for "at" inside of our example string. Depending on where we place the anchor in our expression, we can match different instances of the string we're searching.
-
-`at\b` matches
-![at b](https://user-images.githubusercontent.com/87861603/143668111-d09e9dab-8c8b-446e-9d92-3a1015aca6b8.png)
-
-`\bat` matches
-![bat](https://user-images.githubusercontent.com/87861603/143668121-9b15c968-0e47-4d39-b2d2-8e6241c497d6.png)
-
-`\Bat` matches
-![Bat copy](https://user-images.githubusercontent.com/87861603/143668632-343e0bf7-2e93-44b8-90fb-851a1e4a7d8f.png)
-
-`at\B` matches
-![at B copy](https://user-images.githubusercontent.com/87861603/143668637-94b003c6-e649-4f62-9db6-a39c3da139e1.png)
-
-<br>
-
-The `^` and `$` anchors reference the begining and end of a line. RegEx recognizes the end of a line as a series of characters that is terminated by a return.
-
-<!-- - Example 2: <br>
-    >"I wanted to eat, so I ate a cheeseburger at McDonald’s. Then I went to my car to drive home. <br>
-    Once I got home I realized I was still hungry, so I returned to McDonalds for another delicious cheeseburger." -->
-
-Let's say we wanted to find a match for any character located at the begining and end of each line in our example.
+Let's say we wanted to find a match for any character located at the begining and end from our example string. In regex, the `.` "period" simply means any possible character.
 
 `^.` matches
 ![Start (single line)](https://user-images.githubusercontent.com/87861603/143735449-e50525b3-b05b-430d-968d-60ace53dd30b.png)
@@ -164,9 +133,40 @@ For example, if we wrote `/p(i|e|a)/g` as our expression, we would match:
 
 ### Bracket Expressions
 
+Bracket expressions are very similar to character classes in that they are invoked by the same `[]` brackets except they are primarily used for matching specific special characters.
+
+For example, the regex `[.[{()\\+*\]^$|?]` would match
+
 ### Greedy and Lazy Match
 
 ### Boundaries
+
+Boundaries or "word boundaries" are used when we want to match one or more characters of a word but only if it's located at the begining or the end of the word.
+
+<!-- Boundaries are similar to anchors in how they search for matches except that anchors search for matches in the scope of an entire strings, wherease boundaries search for matches in the scope of a single word. -->
+
+- RegEx boundaries:
+  - `\b` Word Boundary
+  - `\B` Not a Word Boundary
+
+The `\b` and `\B` boundaries reference "word boundaries" which are found at the begining or end of a word. <br>
+
+- Example String: <br>
+  > “I wanted to eat, so I ate a cheeseburger at McDonald’s”
+
+Let's say we wanted to find a match for "at" inside of our example string. Depending on where we place the anchor in our expression, we can match different instances of the string we're searching.
+
+`at\b` matches
+![at b](https://user-images.githubusercontent.com/87861603/143668111-d09e9dab-8c8b-446e-9d92-3a1015aca6b8.png)
+
+`\bat` matches
+![bat](https://user-images.githubusercontent.com/87861603/143668121-9b15c968-0e47-4d39-b2d2-8e6241c497d6.png)
+
+`\Bat` matches
+![Bat copy](https://user-images.githubusercontent.com/87861603/143668632-343e0bf7-2e93-44b8-90fb-851a1e4a7d8f.png)
+
+`at\B` matches
+![at B copy](https://user-images.githubusercontent.com/87861603/143668637-94b003c6-e649-4f62-9db6-a39c3da139e1.png)
 
 ### Back-references
 
