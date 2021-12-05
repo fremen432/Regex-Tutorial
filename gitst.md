@@ -141,15 +141,15 @@ For example, the regex `[.[{()\\+*\]^$|?]` would match
 
 ### Boundaries
 
-Boundaries or "word boundaries" are used when we want to match one or more characters of a word but only if it's located at the begining or the end of the word.
+Boundaries or "word boundaries" are used when we want to match one or more characters of a word but only if it's located at the begining or the end of the word. `\b` references a word boundary and `\B` references the inverse of a word boundary.
 
 <!-- Boundaries are similar to anchors in how they search for matches except that anchors search for matches in the scope of an entire strings, wherease boundaries search for matches in the scope of a single word. -->
 
-- RegEx boundaries:
+<!-- - RegEx boundaries:
   - `\b` Word Boundary
   - `\B` Not a Word Boundary
 
-The `\b` and `\B` boundaries reference "word boundaries" which are found at the begining or end of a word. <br>
+The `\b` and `\B` boundaries reference "word boundaries" which are found at the begining or end of a word. <br> -->
 
 - Example String: <br>
   > “I wanted to eat, so I ate a cheeseburger at McDonald’s”
@@ -170,6 +170,16 @@ Let's say we wanted to find a match for "at" inside of our example string. Depen
 
 ### Back-references
 
+Back-references are used when we want to use the same text more than once at different positions inside the expression. Back-refernces are invoked with `\b` to referecnce the text directly before and `\1` to input the referenced text at a diferent place in the regex. 
+
+Let's say you want to match some text and HTML tags. 
+>  `<html>This is the body section</html>`
+
+Since we know the string "html" will be repeated at the end of the string, we can back-reference "html" with `(html)\b` then input `\1` later to reference it in our expression.
+
+The final regex could look like this:
+> `<(html)\b\>(.*)<\/\1\>`
+
 ### Look-ahead and Look-behind
 
 ## About the Author
@@ -177,3 +187,5 @@ Let's say we wanted to find a match for "at" inside of our example string. Depen
 Clayton Miller is a budding coder and web-developer. He started his journey in the world of coding at with the Full-Stack Web Development Bootcamp at the University of Texas. Clayton looks forward to learning more about all asects of web development, sharpening his coding skills and meeting more awesome coders who are just as excited about coding as he is!
 
 - [Clayton Miller's GitHub](https://github.com/fremen432)
+
+- [claytonmiller.tech](http://www.claytonmiller.tech/)
