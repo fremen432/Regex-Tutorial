@@ -209,12 +209,7 @@ The final regex could look like this:
 Lookahead and lookbehind, collectively called “lookaround”, are used when we want to search for something and return a match for whatever is in "ahead" or "behind" it.
 <br><br>
 
-
-`(?<=(string))` - Positive Look-behind
-
-Positive look-behind searches for 2 criteria in sequence and says return a match for the second criteria but only if the first criteria is behind it.
-
-Example:
+Look-around example:
 
 ```
 https://www.google.com
@@ -223,13 +218,18 @@ https://www.facebook.com
 http://www.facebook.com
 ```
 
+`(?<=(string))` - Positive Look-behind
+
+Positive look-behind searches for 2 criteria in sequence and says return a match for the second criteria but only if the first criteria is behind it.
+
 Let's say we wanted to write a regex using positive look-behind that returns a match of "google.com". We could do this with the following regex:
 `(?<=(https:\/\/www.))(google.com)`
 
 
 Regex: `(?<=(https:\/\/www.))(google.com)`
 
-Match: 
+Match: ![look-behind positive](https://user-images.githubusercontent.com/87861603/144766356-0b8a6947-97ce-43a1-8c59-e92b3d6f3d0d.png)
+
 
 This expression is saying return and match "google.com" but only if "https://www." is behind it.
 
@@ -244,7 +244,8 @@ If we use the same example as above except we change our regex to negative look-
 
 Regex: `(?<!(https:\/\/www.))(google.com)`
 
-Match:
+Match: ![look-behind negative](https://user-images.githubusercontent.com/87861603/144766381-bfe0ce08-5db7-4e42-801d-b214bc9d7038.png)
+
 
 
 `(?=(string))` - Positive Look-ahead
@@ -254,7 +255,8 @@ Positive look-ahead searches for 2 criteria in sequence and says return a match 
 
 Regex: `(https:\/\/www.)(?=(google.com))`
 
-Match:
+Match: ![look-ahead positive](https://user-images.githubusercontent.com/87861603/144766393-6fa9a579-ba5f-48fa-9088-f8a8c55f4048.png)
+
 
 This expression is saying return and match "https://www." but only if "google.com" is ahead of it.
 
@@ -267,7 +269,8 @@ Negative look-ahead searches for 2 criteria in sequence and says return a match 
 
 Regex: `(https:\/\/www.)(?!(google.com))`
 
-Match:
+Match: ![look-ahead negative](https://user-images.githubusercontent.com/87861603/144766400-4b2ec580-fc56-45a9-b515-1b807c22ec2a.png)
+
 
 <br><br>
 
