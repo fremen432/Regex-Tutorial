@@ -206,25 +206,33 @@ The final regex could look like this:
 
 ### Look-ahead and Look-behind
 <br>
-Lookahead and lookbehind, collectively called “lookaround”, are used when we want to search for 
+Lookahead and lookbehind, collectively called “lookaround”, are used when we want to search for something and return a match for whatever is in "ahead" or "behind" it.
 <br><br>
+
 
 `(?<=(string))` - Positive Look-behind
 
-Positive look-behind 
+Positive look-behind searches for 2 criteria in sequence and says return a match for the second criteria but only if the first criteria is behind it.
 
-Example: "https://www.google.com"
+Example:
 
-Regex: `(?<=(https:\/\/www.))(google.com)`
-
-Match: "google.com"
-
-
+```
+https://www.google.com
+http://www.google.com
+https://www.facebook.com
+http://www.facebook.com
+```
 
 Let's say we wanted to write a regex using positive look-behind that returns a match of "google.com". We could do this with the following regex:
 `(?<=(https:\/\/www.))(google.com)`
 
-This expression is saying find all instances of "google.com" but only match and return if it's preceded by "https://www."
+
+Regex: `(?<=(https:\/\/www.))(google.com)`
+
+Match: 
+
+This expression is saying return and match "google.com" but only if "https://www." is behind it.
+
 
 `(?<!(string))` - Negative Look-behind
 
@@ -232,11 +240,34 @@ Negative look-behind searches the exact same way as positive look-behind except 
 
 If we use the same example as above except we change our regex to negative look-behind, `(?<=(https:\/\/www.))(google.com)`, it will match and return all instances of "google.com" which are NOT preceded by "https://www."
 
+
+
+Regex: `(?<!(https:\/\/www.))(google.com)`
+
+Match:
+
+
 `(?=(string))` - Positive Look-ahead
+
+Positive look-ahead searches for 2 criteria in sequence and says return a match for the first criteria but only if the second criteria is ahead of it.
+
+
+Regex: `(https:\/\/www.)(?=(google.com))`
+
+Match:
+
+This expression is saying return and match "https://www." but only if "google.com" is ahead of it.
 
 `(?!(string))` - Negative Look-ahead
 
+Just like with negative look-behind searches the inverse of positive look-behind, negative look-ahead searches the exact same way as positive look-ahead but matches and returns the inverse.
 
+Negative look-ahead searches for 2 criteria in sequence and says return a match for the first criteria EXCEPT if there is also a match for the second criteria.
+
+
+Regex: `(https:\/\/www.)(?!(google.com))`
+
+Match:
 
 <br><br>
 
