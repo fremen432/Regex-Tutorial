@@ -173,7 +173,7 @@ Let's say we wanted to find a match for "at" inside of our example string. Depen
 Back-references are used when we want to use the same text more than once at different positions inside the expression. Back-refernces are invoked with `\b` to referecnce the text directly before and `\1` to input the referenced text at a diferent place in the regex. 
 
 Let's say you want to match some text and HTML tags. 
->  `<html>This is the body section</html>`
+>  `<html>This is dummy text</html>`
 
 Since we know the string "html" will be repeated at the end of the string, we can back-reference "html" with `(html)\b` then input `\1` later to reference it in our expression.
 
