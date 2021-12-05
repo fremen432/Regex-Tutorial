@@ -33,7 +33,7 @@ Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a
 <br><br>
 
 ### Anchors
-
+<br>
 <!-- Anchors are used for matching characters at the beginning and end of a string or adjacent to a word boundary. When using anchors, it's important to think about where the characters are located inside of the any given word or string before writing the expression. Placing the anchor before or after the string you're searching for in the expression will render differing results as seen in the example below. -->
 
 Anchors are used for matching characters or a phrase at the beginning and end of a string. The `^` "carrot" and `$` "dollar-sign" anchors reference the begining and end of a line. RegEx recognizes the end of a line as a series of characters that is terminated by a return.
@@ -52,7 +52,7 @@ Let's say we wanted to find a match for any character located at the begining an
 <br><br>
 
 ### Quantifiers
-
+<br>
 Quantifiers are uesd when you want to find a match for a certain number of characters.
 
 - All RegEx Quantifiers:
@@ -66,8 +66,10 @@ Quantifiers are uesd when you want to find a match for a certain number of chara
 <br><br>
 
 ### OR Operator
-
+<br>
 The OR operator is used to find a match for one \_\_ or another. The OR operator is invoked with the `|` "pipe" character.
+<br><br>
+
 
 - Example String: <br>
   > “I like chocolate icecream. I like vanila icecream.”
@@ -80,9 +82,9 @@ do so with the following expression:
 <br><br>
 
 ### Character Classes
-
+<br>
 Character classes are used to find matches of a specific character set ane are invoked by the `[]` brackets. You can also join multiple character sets together by simply adding the next set imediatly after the previous set.
-
+<br><br>
 For example, if we wanted to find all lower-case alpha characters, we could do so with the following expression:
 
 `/[a-z]/g`
@@ -94,10 +96,10 @@ If we wanted to find lower-case alpha characters, upper-case alpha characters, a
 <br><br>
 
 ### Flags
-
+<br>
 Flags in Regex are placed at the end of an expression and they define different criteria for the searching behavior.
-
-- All RegEx Anchors:
+<br><br>
+- All RegEx Flags:
 
   - `/g` Global
     <br>
@@ -134,9 +136,9 @@ Flags in Regex are placed at the end of an expression and they define different 
 <br><br>
 
 ### Grouping and Capturing
-
+<br>
 Grouping is useful if we want to find a specific character or phrase within another phrase we're searching for. Groups are invoked with the `()` parentheses.
-
+<br><br>
 - Example String:
   > Peter piper picked a patch of pickled peppers
 
@@ -146,9 +148,9 @@ For example, if we wrote `/p(i|e|a)/g` as our expression, we would match:
 <br><br>
 
 ### Bracket Expressions
-
+<br>
 Bracket expressions are very similar to character classes in that they are invoked by the same `[]` brackets except they are primarily used for matching specific special characters.
-
+<br><br>
 For example, the regex `[.[{()\\+*\]^$|?]` would match
 
 <br><br>
@@ -158,9 +160,9 @@ For example, the regex `[.[{()\\+*\]^$|?]` would match
 <br><br>
 
 ### Boundaries
-
+<br>
 Boundaries or "word boundaries" are used when we want to match one or more characters of a word but only if it's located at the begining or the end of the word. `\b` references a word boundary and `\B` references the inverse of a word boundary.
-
+<br><br>
 <!-- Boundaries are similar to anchors in how they search for matches except that anchors search for matches in the scope of an entire strings, wherease boundaries search for matches in the scope of a single word. -->
 
 <!-- - RegEx boundaries:
@@ -189,11 +191,11 @@ Let's say we wanted to find a match for "at" inside of our example string. Depen
 <br><br>
 
 ### Back-references
-
+<br>
 Back-references are used when we want to use the same text more than once at different positions inside the expression. Back-refernces are invoked with `\b` to referecnce the text directly before and `\1` to input the referenced text at a diferent place in the regex. 
-
-Let's say you want to match some text and HTML tags. 
->  `<html>This is dummy text</html>`
+<br><br>
+Let's say you want to match some text and HTML tags.
+> <html">This is dummy text</html>
 
 Since we know the string "html" will be repeated at the end of the string, we can back-reference "html" with `(html)\b` then input `\1` later to reference it in our expression.
 
@@ -203,8 +205,9 @@ The final regex could look like this:
 <br><br>
 
 ### Look-ahead and Look-behind
-
+<br>
 Lookahead and lookbehind, collectively called “lookaround”, are used when we want to search for 
+<br><br>
 
 `(?<=(string))` - Positive Look-behind
 
@@ -238,6 +241,8 @@ If we use the same example as above except we change our regex to negative look-
 <br><br>
 
 ## About the Author
+
+<br>
 
 Clayton Miller is a budding coder and web-developer. He started his journey in the world of coding at with the Full-Stack Web Development Bootcamp at the University of Texas. Clayton looks forward to learning more about all asects of web development, sharpening his coding skills and meeting more awesome coders who are just as excited about coding as he is!
 
