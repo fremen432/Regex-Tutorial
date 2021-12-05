@@ -28,7 +28,7 @@ Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a
     - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
       - [Positive Look-behind](#positive-look-behind)
       - [Negative Look-behind](#negative-look-behind)
-      - [Positive look-ahead](#positive-look-ahead)
+      - [Positive Look-ahead](#positive-look-ahead)
       - [Negative Look-ahead](#negative-look-ahead)
   - [About the Author](#about-the-author)
 
@@ -210,93 +210,107 @@ The final regex could look like this:
 
 ### Look-ahead and Look-behind
 <br>
-Lookahead and lookbehind, collectively called “lookaround”, are used when we want to search for something and return a match for whatever is in "ahead" or "behind" it.
-<br><br>
 
-Look-around example:
+- Description: <br>
+  > Look-ahead and Look-behind, collectively called “lookaround”, searches for a set of 2 criteria in sequence and returns a match for whatever is in "ahead" or "behind" it depending on the criteria specified in the regex.
 
-```
-https://www.google.com
-http://www.google.com
-https://www.facebook.com
-http://www.facebook.com
-```
+<br>
+
+- Look-around example:
+
+  ```
+  https://www.google.com
+  http://www.google.com
+  https://www.facebook.com
+  http://www.facebook.com
+  ```
 
 <br>
 
 #### Positive Look-behind
+
+<br>
+
+- Description: <br>
+  > Positive Look-behind searches for 2 criteria in sequence and returns a match for the second criteria, but only if the first criteria is "behind" it.
+
+- Syntax: `(?<=(criteria-1))(criteria-2)`
+
+- Demo:
+  > Let's say we wanted to write a regex using Positive Look-behind that returns all matches for "google.com" so long as it has "https://www." behind it. We could do this with the following:
   
-Syntax: `(?<=(criteria-1))(criteria-2)`
+  Regex: `(?<=(https:\/\/www.))(google.com)`
 
-Description: 
-> Positive look-behind searches for 2 criteria in sequence and says return a match for the second criteria but only if the first criteria is behind it.
-
-Demo:
-
-> Let's say we wanted to write a regex using positive look-behind that returns a match of "google.com". We could do this with the following regex:
-`(?<=(https:\/\/www.))(google.com)`
-
-
-Regex: `(?<=(https:\/\/www.))(google.com)`
-
-Match: <br>
- > ![look-behind positive](https://user-images.githubusercontent.com/87861603/144766356-0b8a6947-97ce-43a1-8c59-e92b3d6f3d0d.png)
-
-
-This expression is saying return and match "google.com" but only if "https://www." is behind it.
+  Match: <br>
+  > ![Look-behind positive](https://user-images.githubusercontent.com/87861603/144766356-0b8a6947-97ce-43a1-8c59-e92b3d6f3d0d.png)
+  
+  Explaination: <br>
+  > This expression is basically saying, "Return and match 'google.com' but only if 'https://www.' is behind it." Notice the "google.com" on line 2 is not matched because the string behind it, "http://www.", doesn't match criteria-1 in our regex.
 
 <br>
 
 #### Negative Look-behind
-  
-Syntax: `(?<!(criteria-1))(criteria-2)`
-
-
-Negative look-behind searches the exact same way as positive look-behind except it matches and returns the inverse.
-
-If we use the same example as above except we change our regex to negative look-behind, `(?<=(https:\/\/www.))(google.com)`, it will match and return all instances of "google.com" which are NOT preceded by "https://www."
-
-
-
-Regex: `(?<!(https:\/\/www.))(google.com)`
-
-Match: <br>
- > ![look-behind negative](https://user-images.githubusercontent.com/87861603/144766381-bfe0ce08-5db7-4e42-801d-b214bc9d7038.png)
 
 <br>
 
-#### Positive look-ahead
-  
-Syntax: `(criteria-1)(?=(criteria-2))`
+- Description: <br>
+  > Negative Look-behind searches the exact same way as Positive Look-behind except it matches and returns the inverse.
 
+- Syntax: `(?<!(criteria-1))(criteria-2)`
 
-Positive look-ahead searches for 2 criteria in sequence and says return a match for the first criteria but only if the second criteria is ahead of it.
+- Demo:
+  > If we use the same example as above except we change our regex to have a Negative Look-behind syntax, `(?<=(https:\/\/www.))(google.com)`, it will match and return all instances of "google.com" that do NOT have "https://www." behind it.
 
+  Regex: `(?<!(https:\/\/www.))(google.com)`
 
-Regex: `(https:\/\/www.)(?=(google.com))`
+  Match: <br>
+  > ![Look-behind negative](https://user-images.githubusercontent.com/87861603/144766381-bfe0ce08-5db7-4e42-801d-b214bc9d7038.png)
 
-Match: <br>
- > ![look-ahead positive](https://user-images.githubusercontent.com/87861603/144766393-6fa9a579-ba5f-48fa-9088-f8a8c55f4048.png)
+  Explaination: <br>
+  > This expression will only return the "google.com" on line 2 becasue that's the only instance of "google.com" in our example where "https://www." is not behind it.
 
+<br>
 
-This expression is saying return and match "https://www." but only if "google.com" is ahead of it.
+#### Positive Look-ahead
+
+<br>
+
+- Description: <br>
+  > Positive Look-ahead searches for 2 criteria in sequence and returns a match for the first criteria but only if the second criteria is ahead of it.
+
+- Syntax: `(criteria-1)(?=(criteria-2))`
+
+- Demo:
+  > Using our example, let's say we wnat to return all instances of "https://www." but only if "google.com" is ahead of it. We could do this with the following:
+
+  Regex: `(https:\/\/www.)(?=(google.com))`
+
+  Match: <br>
+  > ![Look-ahead positive](https://user-images.githubusercontent.com/87861603/144766393-6fa9a579-ba5f-48fa-9088-f8a8c55f4048.png)
+
+  Explaination: <br>
+  > This expression will only return the "https://www." on line 1 becuase that's the only instance in our example where "google.com" is ahead of it.
 
 <br>
 
 #### Negative Look-ahead
-  
-Syntax: `(criteria-1)(?!(criteria-2))`
 
+<br>
+ 
+- Description: <br>
+  > Just like how Negative Look-behind searches the inverse of Positive Look-behind, Negative Look-ahead searches the exact same way as Positive Look-ahead but matches and returns the inverse. Negative Look-ahead searches for 2 criteria in sequence and returns a match for the first criteria EXCEPT if the second criteria is ahead of it.
 
-Just like with negative look-behind searches the inverse of positive look-behind, negative look-ahead searches the exact same way as positive look-ahead but matches and returns the inverse.
+- Syntax: `(criteria-1)(?!(criteria-2))`
 
-Negative look-ahead searches for 2 criteria in sequence and says return a match for the first criteria EXCEPT if there is also a match for the second criteria.
+- Demo:
 
+  Regex: `(https:\/\/www.)(?!(google.com))`
 
-Regex: `(https:\/\/www.)(?!(google.com))`
+  Match: <br>
+  > ![Look-ahead negative](https://user-images.githubusercontent.com/87861603/144766400-4b2ec580-fc56-45a9-b515-1b807c22ec2a.png)
 
-Match: <br>
- > ![look-ahead negative](https://user-images.githubusercontent.com/87861603/144766400-4b2ec580-fc56-45a9-b515-1b807c22ec2a.png)
+  Explaination: <br>
+  > This expression will only return the "https://www." on line 3 because that is the only instance of "https://www." in our example where "google.com" is NOT ahead of it.
 
 <br><br>
 

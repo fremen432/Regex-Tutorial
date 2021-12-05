@@ -18,7 +18,7 @@ Briefly summarize the regex you will be describing and what you will explain. In
 - [Greedy and Lazy Match](#greedy-and-lazy-match)
 - [Boundaries](#boundaries)
 - [Back-references](#back-references)
-- [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+- [Look-ahead and Look-behind](#Look-ahead-and-Look-behind)
 
 ## Regex Components
 
