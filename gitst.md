@@ -30,6 +30,8 @@ Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a
 
 ## Regex Components
 
+<br><br>
+
 ### Anchors
 
 <!-- Anchors are used for matching characters at the beginning and end of a string or adjacent to a word boundary. When using anchors, it's important to think about where the characters are located inside of the any given word or string before writing the expression. Placing the anchor before or after the string you're searching for in the expression will render differing results as seen in the example below. -->
@@ -47,6 +49,8 @@ Let's say we wanted to find a match for any character located at the begining an
 `.$` matches
 ![end (single line)](https://user-images.githubusercontent.com/87861603/143735469-2f10f7f3-f31f-4de0-a210-18cb8ec87213.png)
 
+<br><br>
+
 ### Quantifiers
 
 Quantifiers are uesd when you want to find a match for a certain number of characters.
@@ -58,6 +62,8 @@ Quantifiers are uesd when you want to find a match for a certain number of chara
   - `?` 0 or One
   - `{5}` Exact Number
   - `{5,6}` Min and Max range of numbers
+
+<br><br>
 
 ### OR Operator
 
@@ -71,6 +77,8 @@ do so with the following expression:
 
 `/i enjoy (chocolate|vanila) icecream./g`
 
+<br><br>
+
 ### Character Classes
 
 Character classes are used to find matches of a specific character set ane are invoked by the `[]` brackets. You can also join multiple character sets together by simply adding the next set imediatly after the previous set.
@@ -82,6 +90,8 @@ For example, if we wanted to find all lower-case alpha characters, we could do s
 If we wanted to find lower-case alpha characters, upper-case alpha characters, and numeric characters, we could do so with the following expression:
 
 `/[a-zA-Z0-9]/g`
+
+<br><br>
 
 ### Flags
 
@@ -121,6 +131,8 @@ Flags in Regex are placed at the end of an expression and they define different 
     The Sticky flag returns matches
     <br><br>
 
+<br><br>
+
 ### Grouping and Capturing
 
 Grouping is useful if we want to find a specific character or phrase within another phrase we're searching for. Groups are invoked with the `()` parentheses.
@@ -131,13 +143,19 @@ Grouping is useful if we want to find a specific character or phrase within anot
 For example, if we wrote `/p(i|e|a)/g` as our expression, we would match:
 <img width="436" alt="Screen Shot 2021-11-29 at 10 05 29 AM" src="https://user-images.githubusercontent.com/87861603/143902327-c5d6164b-d1d9-449b-bd4a-aeed2b37fb3b.png">
 
+<br><br>
+
 ### Bracket Expressions
 
 Bracket expressions are very similar to character classes in that they are invoked by the same `[]` brackets except they are primarily used for matching specific special characters.
 
 For example, the regex `[.[{()\\+*\]^$|?]` would match
 
+<br><br>
+
 ### Greedy and Lazy Match
+
+<br><br>
 
 ### Boundaries
 
@@ -168,6 +186,8 @@ Let's say we wanted to find a match for "at" inside of our example string. Depen
 `at\B` matches
 ![at B copy](https://user-images.githubusercontent.com/87861603/143668637-94b003c6-e649-4f62-9db6-a39c3da139e1.png)
 
+<br><br>
+
 ### Back-references
 
 Back-references are used when we want to use the same text more than once at different positions inside the expression. Back-refernces are invoked with `\b` to referecnce the text directly before and `\1` to input the referenced text at a diferent place in the regex. 
@@ -180,7 +200,42 @@ Since we know the string "html" will be repeated at the end of the string, we ca
 The final regex could look like this:
 > `<(html)\b\>(.*)<\/\1\>`
 
+<br><br>
+
 ### Look-ahead and Look-behind
+
+Lookahead and lookbehind, collectively called “lookaround”, are used when we want to search for 
+
+`(?<=(string))` - Positive Look-behind
+
+Positive look-behind 
+
+Example: "https://www.google.com"
+
+Regex: `(?<=(https:\/\/www.))(google.com)`
+
+Match: "google.com"
+
+
+
+Let's say we wanted to write a regex using positive look-behind that returns a match of "google.com". We could do this with the following regex:
+`(?<=(https:\/\/www.))(google.com)`
+
+This expression is saying find all instances of "google.com" but only match and return if it's preceded by "https://www."
+
+`(?<!(string))` - Negative Look-behind
+
+Negative look-behind searches the exact same way as positive look-behind except it matches and returns the inverse.
+
+If we use the same example as above except we change our regex to negative look-behind, `(?<=(https:\/\/www.))(google.com)`, it will match and return all instances of "google.com" which are NOT preceded by "https://www."
+
+`(?=(string))` - Positive Look-ahead
+
+`(?!(string))` - Negative Look-ahead
+
+
+
+<br><br>
 
 ## About the Author
 
