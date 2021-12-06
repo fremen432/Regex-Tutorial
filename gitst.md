@@ -165,15 +165,9 @@ For example, the regex `[.[{()\\+*\]^$|?]` would match
 
 ### Boundaries
 <br>
-Boundaries or "word boundaries" are used when we want to match one or more characters of a word but only if it's located at the begining or the end of the word. `\b` references a word boundary and `\B` references the inverse of a word boundary.
-<br><br>
-<!-- Boundaries are similar to anchors in how they search for matches except that anchors search for matches in the scope of an entire strings, wherease boundaries search for matches in the scope of a single word. -->
 
-<!-- - RegEx boundaries:
-  - `\b` Word Boundary
-  - `\B` Not a Word Boundary
-
-The `\b` and `\B` boundaries reference "word boundaries" which are found at the begining or end of a word. <br> -->
+- Description: <br>
+  > Boundaries or "word boundaries" are used when we want to match one or more characters of a word but only if it's located at the begining or the end of the word. `\b` references a word boundary and `\B` references the inverse of a word boundary.
 
 - Example String: <br>
   > “I wanted to eat, so I ate a cheeseburger at McDonald’s”
@@ -198,9 +192,7 @@ Let's say we wanted to find a match for "at" inside of our example string. Depen
 <br>
 
 - Description: <br>
-  > Back-references are used when we want to use the same text more than once at different positions inside the expression. Back-refernces are invoked with `\b` to referecnce the text directly before and `\1` to input the referenced text at a diferent place in the regex. 
-
-<!-- search for multiple instances of some criteria inside a single string. -->
+  > Back-references are used to search for multiple instances of some criteria inside a single string. Back-refernces are invoked with `\1` 
 
 - Syntax: `(criteria-1)\1` 
 
@@ -214,10 +206,11 @@ Let's say we wanted to find a match for "at" inside of our example string. Depen
 
   Regex: `\b(\w+)\s\1\b`
 
-  Match: ![back-reference](https://user-images.githubusercontent.com/87861603/144773424-320b4fd7-e560-4770-80a7-1fa275a3d110.png)
+  Match: <br>
+  > ![back-reference](https://user-images.githubusercontent.com/87861603/144773424-320b4fd7-e560-4770-80a7-1fa275a3d110.png)
 
-
-  Explaination:
+  Explaination: <br>
+  > Our regex is basically saying, "Find all instances of a word `\w` of any length `+` followed by a space `\s` that repeats `\1`. These repeating words must also be inside a word boundary `\b`."
 
 <br><br>
 
