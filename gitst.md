@@ -214,7 +214,8 @@ Let's say we wanted to find a match for "at" inside of our example string. Depen
 
   Regex: `\b(\w+)\s\1\b`
 
-  Match: 
+  Match: ![back-reference](https://user-images.githubusercontent.com/87861603/144773424-320b4fd7-e560-4770-80a7-1fa275a3d110.png)
+
 
   Explaination:
 
