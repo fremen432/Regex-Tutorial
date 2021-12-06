@@ -103,6 +103,7 @@ Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a
   Regex: `very +`
 
   Match: <br>
+  ![+](https://user-images.githubusercontent.com/87861603/144787988-2ab92b5d-cbcb-42b3-ace6-1812f70aa4f5.png)
 
 
   <br>
@@ -110,28 +111,31 @@ Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a
   Regex: `very *`
 
   Match: <br>
-  
+  ![*](https://user-images.githubusercontent.com/87861603/144788009-0d86371b-b88e-4274-9b8d-314ae096892b.png)
 
   <br>
 
   Regex: `very?`
 
   Match: <br>
-  
+  ![?](https://user-images.githubusercontent.com/87861603/144788034-500446ad-a2d5-4ca8-bcc9-03bf2901eec4.png)
+
 
   <br>
 
   Regex: `very{3}`
 
   Match: <br>
-  
+  ![{3}](https://user-images.githubusercontent.com/87861603/144788073-a1ee954f-2a81-4391-92b7-4924d4a46ddd.png)
+
 
   <br>
 
   Regex: `very{2,3}`
 
   Match: <br>
-  
+  ![{2,3}](https://user-images.githubusercontent.com/87861603/144788085-12aab486-f8cf-4ba3-a88c-93a4a10a43da.png)
+
 
 <br><br>
 
