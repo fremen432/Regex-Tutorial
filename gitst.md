@@ -167,24 +167,58 @@ For example, the regex `[.[{()\\+*\]^$|?]` would match
 <br>
 
 - Description: <br>
-  > Boundaries or "word boundaries" are used when we want to match one or more characters of a word but only if it's located at the begining or the end of the word. `\b` references a word boundary and `\B` references the inverse of a word boundary.
+  > Boundaries or "word boundaries" are used when we want to match one or more characters of a word but only if it's located at the begining or the end of the word. 
 
-- Example String: <br>
-  > “I wanted to eat, so I ate a cheeseburger at McDonald’s”
+- Syntax: `\b` references a word boundary and `\B` references a non-word boundary.
 
-Let's say we wanted to find a match for "at" inside of our example string. Depending on where we place the anchor in our expression, we can match different instances of the string we're searching.
+- Example:
+  ```
+  I wanted to eat, so I ate a cheeseburger at McDonald’s
+  ```
 
-`at\b` matches
-![at b](https://user-images.githubusercontent.com/87861603/143668111-d09e9dab-8c8b-446e-9d92-3a1015aca6b8.png)
+- Demo:
+  > Let's say we wanted to find a match for "at" inside of our example string. Depending on where we place the anchor in our expression, we can match different instances of the string we're searching.
 
-`\bat` matches
-![bat](https://user-images.githubusercontent.com/87861603/143668121-9b15c968-0e47-4d39-b2d2-8e6241c497d6.png)
+  <br>
+  
+  Regex: `at\b`
 
-`\Bat` matches
-![Bat copy](https://user-images.githubusercontent.com/87861603/143668632-343e0bf7-2e93-44b8-90fb-851a1e4a7d8f.png)
+  Match: <br>
+  > ![at b](https://user-images.githubusercontent.com/87861603/143668111-d09e9dab-8c8b-446e-9d92-3a1015aca6b8.png)
+  
+  Explaination: <br>
+  > The regex `at\b` is basically saying, "Find all instances of 'at' that are followed by a word boundary."
 
-`at\B` matches
-![at B copy](https://user-images.githubusercontent.com/87861603/143668637-94b003c6-e649-4f62-9db6-a39c3da139e1.png)
+  <br>
+
+  Regex: `at\B`
+
+  Match: <br>
+  > ![at B copy](https://user-images.githubusercontent.com/87861603/143668637-94b003c6-e649-4f62-9db6-a39c3da139e1.png)
+
+  Explaination: <br>
+  > The regex `at\B` is basically saying, "Find all instances of 'at' that are NOT followed by a word boundary."
+
+  <br>
+
+  Regex: `\bat`
+
+  Match: <br>
+  > ![bat](https://user-images.githubusercontent.com/87861603/143668121-9b15c968-0e47-4d39-b2d2-8e6241c497d6.png)
+
+  Explaination: <br>
+  > The regex `\bat` is basically saying, "Find all instances of 'at' that are preceded by a word boundary."
+
+  <br>
+  
+  Regex: `\Bat`
+
+  Match: <br>
+  > ![Bat copy](https://user-images.githubusercontent.com/87861603/143668632-343e0bf7-2e93-44b8-90fb-851a1e4a7d8f.png)
+
+  Explaination: <br>
+  > The regex `\Bat` is basically saying, "Find all instances of 'at' that are NOT preceded by a word boundary."
+  
 
 <br><br>
 
