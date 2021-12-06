@@ -100,18 +100,23 @@ Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a
 - Demo:
   > Lorem
 
-  Regex: `very +`
-
-  Match: <br>
-  ![+](https://user-images.githubusercontent.com/87861603/144787988-2ab92b5d-cbcb-42b3-ace6-1812f70aa4f5.png)
-
-
-  <br>
-
   Regex: `very *`
 
   Match: <br>
   ![*](https://user-images.githubusercontent.com/87861603/144788009-0d86371b-b88e-4274-9b8d-314ae096892b.png)
+  
+  Explaination: <br>
+  > The regex `very *` is basically saying, "Find all instances of 'very' that are followed by 0 or more " " space characters."
+
+  <br>
+
+  Regex: `very +`
+
+  Match: <br>
+  ![+](https://user-images.githubusercontent.com/87861603/144787988-2ab92b5d-cbcb-42b3-ace6-1812f70aa4f5.png)
+  
+  Explaination: <br>
+  > The regex `very +` is basically saying, "Find all instances of 'very' that are followed by one or more " " space characters."
 
   <br>
 
@@ -119,7 +124,9 @@ Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a
 
   Match: <br>
   ![?](https://user-images.githubusercontent.com/87861603/144788034-500446ad-a2d5-4ca8-bcc9-03bf2901eec4.png)
-
+  
+  Explaination: <br>
+  > The regex `very?` is basically saying, "Find all instances of 'ver' that are followed by 0 or 1 "y" characters."
 
   <br>
 
@@ -127,7 +134,9 @@ Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a
 
   Match: <br>
   ![{3}](https://user-images.githubusercontent.com/87861603/144788073-a1ee954f-2a81-4391-92b7-4924d4a46ddd.png)
-
+  
+  Explaination: <br>
+  > The regex `very{3}` is basically saying, "Find all instances of 'ver' that are followed by exactly 3 "y" characters."
 
   <br>
 
@@ -135,7 +144,9 @@ Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a
 
   Match: <br>
   ![{2,3}](https://user-images.githubusercontent.com/87861603/144788085-12aab486-f8cf-4ba3-a88c-93a4a10a43da.png)
-
+  
+  Explaination: <br>
+  > The regex `very{2,3}` is basically saying, "Find all instances of 'ver' that are followed by 2-4 "y" characters."
 
 <br><br>
 
