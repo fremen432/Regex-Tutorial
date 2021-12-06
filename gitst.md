@@ -38,20 +38,38 @@ Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a
 
 ### Anchors
 <br>
-<!-- Anchors are used for matching characters at the beginning and end of a string or adjacent to a word boundary. When using anchors, it's important to think about where the characters are located inside of the any given word or string before writing the expression. Placing the anchor before or after the string you're searching for in the expression will render differing results as seen in the example below. -->
 
-Anchors are used for matching characters or a phrase at the beginning and end of a string. The `^` "carrot" and `$` "dollar-sign" anchors reference the begining and end of a line. RegEx recognizes the end of a line as a series of characters that is terminated by a return.
+- Description: <br>
+  > Anchors are used for matching characters or a phrase at the beginning and end of a string. RegEx recognizes the end of a string as a series of characters that is terminated by a return.
+ 
 
-- Example String:
-  > “I wanted to eat, so I ate a cheeseburger at McDonald's.”
+- Syntax: The `^` "carrot" references the begining of a line and `$` "dollar-sign" references the end of a line.
 
-Let's say we wanted to find a match for any character located at the begining and end from our example string. In regex, the `.` "period" simply means any possible character.
+- Example:
+  ```
+  I wanted to eat, so I ate a cheeseburger at McDonald's
+  ```
 
-`^.` matches
-![Start (single line)](https://user-images.githubusercontent.com/87861603/143735449-e50525b3-b05b-430d-968d-60ace53dd30b.png)
+- Demo:
+  > Let's say we wanted to find a match for any character located at the begining and end from our example string. In regex, the `.` "period" simply means any possible character.
 
-`.$` matches
-![end (single line)](https://user-images.githubusercontent.com/87861603/143735469-2f10f7f3-f31f-4de0-a210-18cb8ec87213.png)
+  Regex: `^.`
+
+  Match: <br>
+  > ![Start (single line)](https://user-images.githubusercontent.com/87861603/143735449-e50525b3-b05b-430d-968d-60ace53dd30b.png)
+  
+  Explaination: <br>
+  > The regex `^.` is basically saying, "Find an instance of any character `.` located at the begining of a string `^`."
+
+  <br>
+
+  Regex: `.$`
+
+  Match: <br>
+  > ![end (single line)](https://user-images.githubusercontent.com/87861603/143735469-2f10f7f3-f31f-4de0-a210-18cb8ec87213.png)
+  
+  Explaination: <br>
+  > The regex `.$` is basically saying, "Find an instance of any character `.` located at the end of a string `$`."
 
 <br><br>
 
@@ -160,6 +178,21 @@ For example, the regex `[.[{()\\+*\]^$|?]` would match
 <br><br>
 
 ### Greedy and Lazy Match
+<br>
+
+- Description: <br>
+  > Lorem 
+
+- Syntax: Lorem
+
+- Example:
+  ```
+  Lorem
+  ```
+
+- Demo:
+  > Lorem
+
 
 <br><br>
 
