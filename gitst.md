@@ -75,15 +75,33 @@ Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a
 
 ### Quantifiers
 <br>
-Quantifiers are uesd when you want to find a match for a certain number of characters.
+
+- Description: <br>
+  > Quantifiers are uesd when you want to find a match for a certain number of characters.
+
+  <br>
 
 - All RegEx Quantifiers:
-
   - `*` 0 or More
   - `+` 1 or More
   - `?` 0 or One
   - `{5}` Exact Number
   - `{5,6}` Min and Max range of numbers
+
+  <br>
+
+- Example:
+  ```
+  Lorem
+  ```
+
+  <br>
+
+- Demo:
+  > Lorem
+
+  <br>
+
 
 <br><br>
 
@@ -217,7 +235,7 @@ For example, the regex `[.[{()\\+*\]^$|?]` would match
   Regex: `at\b`
 
   Match: <br>
-  > ![at b](https://user-images.githubusercontent.com/87861603/143668111-d09e9dab-8c8b-446e-9d92-3a1015aca6b8.png)
+![at b](https://user-images.githubusercontent.com/87861603/143668111-d09e9dab-8c8b-446e-9d92-3a1015aca6b8.png)
   
   Explaination: <br>
   > The regex `at\b` is basically saying, "Find all instances of 'at' that are followed by a word boundary."
@@ -227,7 +245,7 @@ For example, the regex `[.[{()\\+*\]^$|?]` would match
   Regex: `at\B`
 
   Match: <br>
-  > ![at B copy](https://user-images.githubusercontent.com/87861603/143668637-94b003c6-e649-4f62-9db6-a39c3da139e1.png)
+![at B copy](https://user-images.githubusercontent.com/87861603/143668637-94b003c6-e649-4f62-9db6-a39c3da139e1.png)
 
   Explaination: <br>
   > The regex `at\B` is basically saying, "Find all instances of 'at' that are NOT followed by a word boundary."
@@ -237,7 +255,7 @@ For example, the regex `[.[{()\\+*\]^$|?]` would match
   Regex: `\bat`
 
   Match: <br>
-  > ![bat](https://user-images.githubusercontent.com/87861603/143668121-9b15c968-0e47-4d39-b2d2-8e6241c497d6.png)
+![bat](https://user-images.githubusercontent.com/87861603/143668121-9b15c968-0e47-4d39-b2d2-8e6241c497d6.png)
 
   Explaination: <br>
   > The regex `\bat` is basically saying, "Find all instances of 'at' that are preceded by a word boundary."
@@ -246,8 +264,8 @@ For example, the regex `[.[{()\\+*\]^$|?]` would match
   
   Regex: `\Bat`
 
-  Match: <br>
-  > ![Bat copy](https://user-images.githubusercontent.com/87861603/143668632-343e0bf7-2e93-44b8-90fb-851a1e4a7d8f.png)
+  Match:  
+  ![Bat copy](https://user-images.githubusercontent.com/87861603/143668632-343e0bf7-2e93-44b8-90fb-851a1e4a7d8f.png)
 
   Explaination: <br>
   > The regex `\Bat` is basically saying, "Find all instances of 'at' that are NOT preceded by a word boundary."
