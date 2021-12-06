@@ -140,13 +140,14 @@ Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a
 
   <br>
 
-  Regex: `very{2,3}`
+  Regex: `very{2,4}`
 
   Match: <br>
-  ![{2,3}](https://user-images.githubusercontent.com/87861603/144788085-12aab486-f8cf-4ba3-a88c-93a4a10a43da.png)
+  ![{2,4}](https://user-images.githubusercontent.com/87861603/144788880-71e7960a-e8c0-4539-8b24-088681149f7e.png)
+
   
   Explaination: <br>
-  > The regex `very{2,3}` is basically saying, "Find all instances of 'ver' that are followed by 2-4 "y" characters."
+  > The regex `very{2,4}` is basically saying, "Find all instances of 'ver' that are followed by 2-4 "y" characters."
 
 <br><br>
 
