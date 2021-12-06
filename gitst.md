@@ -77,7 +77,7 @@ Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a
 <br>
 
 - Description: <br>
-  > Quantifiers are uesd when you want to find a match for a certain number of characters.
+  > Quantifiers are uesd when you want to return a match for a certain number of characters.
 
   <br>
 
@@ -92,7 +92,7 @@ Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a
 
 - Example:
   ```
-  Lorem
+  I am very veryy veryyy veryyyy hungry
   ```
 
   <br>
@@ -100,8 +100,38 @@ Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a
 - Demo:
   > Lorem
 
+  Regex: `very +`
+
+  Match: <br>
+
+
   <br>
 
+  Regex: `very *`
+
+  Match: <br>
+  
+
+  <br>
+
+  Regex: `very?`
+
+  Match: <br>
+  
+
+  <br>
+
+  Regex: `very{3}`
+
+  Match: <br>
+  
+
+  <br>
+
+  Regex: `very{2,3}`
+
+  Match: <br>
+  
 
 <br><br>
 
