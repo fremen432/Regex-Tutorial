@@ -1,11 +1,15 @@
 # Regular Expression Tutorial
 
 This tutorial is meant to be a foundational reference guide for anyone learning Regular Espressions.
-By the end of this tutorial you will know what a Regular Expression (regex) is, when to use them, all of their different functionality, as well as some cool tips on how to improve your own regex scripting.
+By the end of this tutorial you will know what a Regular Expression (regex) is, when to use them, all of their different functionality, as well as some cool tips on how to improve your own regex scripting. Throughout this tutorial we'll be referencing a specific regular expression, breaking down each component and learning about the functionality of each part. The regex we'll be looking at will search for an email address such as "bob@gmail.com" and return a match if the structure of that email matches the criteria of our regular expression.
+
+Regex: `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 
 ## Summary
 
-In this tutorial we will discuss
+In this tutorial we will discuss 
+
+
 
 Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a></span> to navitage to an online regex editor so you can practice your regex scripting as you learn!
 
