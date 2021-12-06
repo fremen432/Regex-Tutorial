@@ -1,17 +1,17 @@
 # Regular Expression Tutorial
 
 This tutorial is meant to be a foundational reference guide for anyone learning Regular Espressions.
-By the end of this tutorial you will know what a Regular Expression (regex) is, when to use them, all of their different functionality, as well as some cool tips on how to improve your own regex scripting. Throughout this tutorial we'll be referencing a specific regular expression, breaking down each component and learning about the functionality of each part. The regex we'll be looking at will search for an email address such as "bob@gmail.com" and return a match if the structure of that email matches the criteria of our regular expression.
+By the end of this tutorial you will know what a regular expression is, when to use them, all of their different functionality, as well as some cool tips on how to improve your own regex scripting. Throughout this tutorial we'll be referencing a specific regular expression, breaking down each component and learning about the functionality of each part. 
 
-Regex: `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
+Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a></span> to navitage to an online regex editor so you can practice your regex scripting as you learn!
 
 ## Summary
 
-In this tutorial we will discuss 
+Regular expression for email: `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
 
+The goal of each regex is to return a match for a continuous series of characters. The type of characters, number characters and order of characters can all be specified and modified in the regex. 
+The regex we'll be referencing in this tutorial searches for an email address such as "bob@gmail.com" and return a match if the structure of that email matches the criteria of our regular expression. 
 
-
-Bonus: You can click <span><a href="https://regexr.com/" target="_blank">here</a></span> to navitage to an online regex editor so you can practice your regex scripting as you learn!
 
 ## Table of Contents
 
