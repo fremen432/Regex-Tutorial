@@ -196,15 +196,27 @@ Let's say we wanted to find a match for "at" inside of our example string. Depen
 
 ### Back-references
 <br>
-Back-references are used when we want to use the same text more than once at different positions inside the expression. Back-refernces are invoked with `\b` to referecnce the text directly before and `\1` to input the referenced text at a diferent place in the regex. 
-<br><br>
-Let's say you want to match some text and HTML tags.
-> <html">This is dummy text</html>
 
-Since we know the string "html" will be repeated at the end of the string, we can back-reference "html" with `(html)\b` then input `\1` later to reference it in our expression.
+- Description: <br>
+  > Back-references are used when we want to use the same text more than once at different positions inside the expression. Back-refernces are invoked with `\b` to referecnce the text directly before and `\1` to input the referenced text at a diferent place in the regex. 
 
-The final regex could look like this:
-> `<(html)\b\>(.*)<\/\1\>`
+<!-- search for multiple instances of some criteria inside a single string. -->
+
+- Syntax: `(criteria-1)\1` 
+
+- Example:
+  ```
+  We the People of the the United States, in Order to form a more more perfect Union, establish Justice, insure domestic Tranquility, provide for the the common defence, promote the general Welfare, and and secure the Blessings of Liberty to ourselves and our Posterity, do do ordain and establish this Constitution for the United States of of America.
+  ```
+
+- Demo: 
+  > Lets say we wanted to find all instances of repreated words in our example. We can use back-referencing to do this.
+
+  Regex: `\b(\w+)\s\1\b`
+
+  Match: 
+
+  Explaination:
 
 <br><br>
 
